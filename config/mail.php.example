@@ -1,0 +1,18 @@
+<?php
+/**
+ * Smart Parking System - Mail Configuration Example Template
+ * 
+ * Rename this file to mail.php and fill in your SMTP details to run!
+ */
+
+define('SEND_REAL_EMAILS', false); 
+
+define('SMTP_HOST', 'smtp.gmail.com');
+define('SMTP_PORT', 587); 
+define('SMTP_USER', 'your-email@gmail.com'); // Put your SMTP email here
+define('SMTP_PASS', 'your-app-password');     // Put your SMTP app password here
+define('SMTP_SECURE', 'tls'); 
+
+define('SMTP_FROM_EMAIL', 'no-reply@smartpark.com');
+define('SMTP_FROM_NAME', 'SmartPark Notification');
+?>

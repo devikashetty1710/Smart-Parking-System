@@ -1,0 +1,13 @@
+# IDE and System Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+
+# XAMPP / Local Backup Files
+*.bak
+*.tmp
+
+# Security: Exclude real SMTP passwords from public GitHub
+config/mail.php
