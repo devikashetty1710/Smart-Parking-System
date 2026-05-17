@@ -50,53 +50,7 @@ dbms_final/
 
 ---
 
-## 🗄️ Relational Database Schema
 
-The database `smart_parking_db` is composed of four highly normalized relational tables:
-
-```mermaid
-erDiagram
-    USERS {
-        int user_id PK
-        string full_name
-        string email UNIQUE
-        string password
-        string phone
-        enum role
-        timestamp created_at
-    }
-    PARKING_SPACES {
-        int space_id PK
-        string space_name
-        string location
-        decimal price_per_hour
-        int capacity
-        string status
-    }
-    RESERVATIONS {
-        int reservation_id PK
-        int user_id FK
-        int space_id FK
-        datetime start_time
-        datetime end_time
-        enum status
-        decimal total_price
-    }
-    PAYMENTS {
-        int payment_id PK
-        int reservation_id FK
-        decimal amount
-        string payment_method
-        string transaction_id UNIQUE
-        enum status
-        timestamp payment_date
-    }
-    USERS ||--o{ RESERVATIONS : places
-    PARKING_SPACES ||--o{ RESERVATIONS : holds
-    RESERVATIONS ||--|| PAYMENTS : settles
-```
-
----
 
 ## 🚀 Installation & Local Setup
 
